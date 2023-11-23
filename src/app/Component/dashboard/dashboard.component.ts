@@ -27,7 +27,15 @@ export class DashboardComponent {
     return Array.isArray(this.todoData);
   }
   // Call the findTodos method when the component is initialized.
- 
+  logout(): void {
+    // Clear all cookies related to authentication
+    this.cookieService.delete('user_id');
+    this.cookieService.delete('user_name');
+    this.cookieService.delete('accessToken');
+
+    // Redirect back to login page after logout
+    this.router.navigate(['/login']);
+  }
 
   findTodo(): void {
     const user_id = this.cookieService.get('user_id');
