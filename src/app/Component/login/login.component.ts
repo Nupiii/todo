@@ -32,7 +32,7 @@ export class LoginComponent {
           this.cookieService.set('user_id', response.id);
           this.cookieService.set('user_name', response.username);
           this.cookieService.set('accessToken', response.accessToken);
-          
+          console.log(response.accessToken);
           this.router.navigate(['/dashboard']);
 
           // Display success message using MatSnackBar
