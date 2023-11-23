@@ -31,6 +31,8 @@ export class LoginComponent {
           console.log('Login successful:', response);
           this.cookieService.set('user_id', response.id);
           this.cookieService.set('user_name', response.username);
+          this.cookieService.set('accessToken', response.accessToken);
+          
           this.router.navigate(['/dashboard']);
 
           // Display success message using MatSnackBar
