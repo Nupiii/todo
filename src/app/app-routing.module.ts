@@ -12,9 +12,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
 
-  {path:'create',component:CreateTodoComponent},
+  {path:'create',component:CreateTodoComponent, canActivate: [AuthGuard]},
   
-  {path:'delete',component:DeleteTodoComponent},
+  {path:'delete',component:DeleteTodoComponent, canActivate: [AuthGuard]},
 
   { path: '', redirectTo: '/register', pathMatch: 'full' },
 
