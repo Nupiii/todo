@@ -11,6 +11,17 @@
   background-color: #3498db; /* Set the background color to your preferred color */
   padding: 20px;
 }
+/* dashboard.component.css */
+.dashboard-container {
+  position: relative;
+}
+
+.logout-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* Add more styling as needed */
+}
 
 /* Change the background color of the create-or-find-section to white */
 .create-or-find-section {
